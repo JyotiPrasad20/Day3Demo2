@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin:0;
+            padding:0;
+            background-color: rgb(178, 221, 247);
+        }
+
+        .block{
+            width:60%;
+            border: solid 10px rgb(181, 181, 248);
+            background-color: rgb(248, 252, 205);
+            border-radius:10px;
+            margin: 30px auto;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 50px ;
+            grid-row-gap: 30px;
+
+        }
+
+        .block div{
+            height:130px;
+            border: solid 5px;
+            font-size: 40px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: darkgray;
+        
+        }
+
+              /* Desktop screen */
+
+
+        @media only screen and (max-width: 500px)
+        {
+            .block{
+                width: 98%;
+                margin: 5px auto;
+                padding: 20px;
+                background-color: seagreen;
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .block div{
+                height:200px;
+            }
+        }
+
+        /* Phone screen */
+
+        @media only screen and (max-width: 500px)
+        {
+            .block{
+                grid-template-columns: repeat(1, 1fr);
+                background-color: aquamarine;
+            }
+
+            .block div{
+                height: 200px;
+            }
+
+            p.inc{
+                color: rgb(96, 63, 14);
+            }
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="block">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+      </div>
+
+      <p class="inc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, sit, perferendis doloribus explicabo vel perspiciatis maxime error ad enim harum soluta veniam laboriosam placeat. Quaerat quia accusantium dignissimos aliquid dicta.</p>
+
+    
+</body>
+</html>
